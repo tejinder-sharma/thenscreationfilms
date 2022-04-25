@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="output.css">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link href="fontawesome-all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body x-data="{ open: false, load: false }" :onload="load = true">
-    <div class="fixed w-full min-h-screen bg-black flex justify-center items-center z-40" :class="load ? 'hidden' : 'fixed'">
+    <div class="fixed w-full min-h-screen bg-black flex justify-center items-center z-40"
+        :class="load ? 'hidden' : 'fixed'">
         <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
-          <span class="visually-hidden">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
     <header class="fixed w-full bg-[#667354] h-20 text-white z-20">
@@ -79,7 +81,8 @@
             <div class="lg:w-1/2 w-full p-4">
                 <div class="bg-[#C4C4C4] h-full grid place-content-center px-6 text-black py-32 lg:py-0">
                     <h3 class="text-center font-bold text-2xl">ABOUT ME</h3>
-                    <p class="mt-6 text-xl">My name is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis ac nibh
+                    <p class="mt-6 text-xl">My name is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis
+                        ac nibh
                         nullam feugiat. Accumsan vestibulum varius arcu posuere orci vitae sagittis posuere vitae.</p>
                     <a href="#"
                         class="mt-6 flex mx-auto px-6 py-2 border-2 text-xl bg-black text-white border-black rounded-md hover:text-black hover:bg-transparent">LET'S
@@ -336,62 +339,58 @@
             </div>
         </div>
     </section>
-    <div class="footer">
-        <div class="container px-4 sm:px-8">
-            <h4 class="mb-8 lg:max-w-3xl lg:mx-auto">Pavo is a mobile application for marketing automation and you can reach the team at <a class="text-indigo-600 hover:text-gray-500" href="mailto:email@domain.com">email@domain.com</a></h4>
-            <div class="social-container">
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-facebook-f fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-twitter fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-instagram fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-youtube fa-stack-1x"></i>
-                    </a>
-                </span>
-            </div> <!-- end of social-container -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->
-    <!-- end of footer -->
+    <footer id="contacts">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col text-center items-center w-full">
+                <h2 class="sm:text-3xl text-2xl font-medium">Contact Me</h2>
+                <span class="inline-block mt-1 mb-4 w-24 h-1 bg-green-500"></span>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium quia, molestiae eum, Earum
+                    repellat ipsam, distinctio ullam atque fuga dolorem!</p>
+            </div>
+            <div class="grid md:grid-cols-[2fr_1fr] gap-12 mt-8 grid-cols-1">
+                <div class="">
+                    <h2 class=" ">Get in touch</h2>
+                    <form action="">
+                        <div class="grid md:grid-cols-2 gap-4 grid-cols-1">
+                            <div>
+                                <label for="name" class="block mb-1">Name</label>
+                                <input type="text" id="name" class="w-full resize-none p-2 border-2 border-black">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-1">Email</label>
+                                <input type="email" id="email" class="w-full resize-none p-2 border-2 border-black">
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" class="w-full resize-none p-2 border-2 border-black"></textarea>
+                        </div>
+                        <button class="inline-block px-4 py-2 bg-green-500 border-none mt-4 text-lg uppercase tracking-wide transition delay-200 text-white hover:bg-red-500">Send</button>
+                    </form>
+                </div>
+                <div class="follow-container">
+                    <h2>Follow</h2>
+                    <div class="grid-repeat">
+                        <a href="javscript:void(0)" class="inline-flex justify-center items-center w-12 h-12 p-2 border-2 border-black rounded-md text-2xl"><i class="fa fa-facebook"></i></a>
+                        <a href="javscript:void(0)" class="inline-flex justify-center items-center w-12 h-12 p-2 border-2 border-black rounded-md text-2xl"><i class="fa fa-twitter"></i></a>
+                        <a href="javscript:void(0)" class="inline-flex justify-center items-center w-12 h-12 p-2 border-2 border-black rounded-md text-2xl"><i class="fa fa-instagram"></i></a>
+                        <a href="javscript:void(0)" class="inline-flex justify-center items-center w-12 h-12 p-2 border-2 border-black rounded-md text-2xl"><i class="fa fa-whatsapp"></i></span>
+                            <a href="javscript:void(0)" class="inline-flex justify-center items-center w-12 h-12 p-2 border-2 border-black rounded-md text-2xl"><i class="fa fa-linkedin"></i></a>
+                            <a href="javscript:void(0)" class="inline-flex justify-center items-center w-12 h-12 p-2 border-2 border-black rounded-md text-2xl"><i class="fa fa-phone"></i></a>
+                            <a href="javscript:void(0)" class="inline-flex justify-center items-center w-12 h-12 p-2 border-2 border-black rounded-md text-2xl"><i class="fa fa-envelope"></i></a>
+                            <a href="javscript:void(0)" class="inline-flex justify-center items-center w-12 h-12 p-2 border-2 border-black rounded-md text-2xl"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+        <div class="copyright pb-8">
+            <div class="container mx-auto text-center">
+               Designed by: Tejinder Sharma
+            </div> 
 
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
-            <ul class="mb-4 list-unstyled p-small">
-                <li class="mb-2"><a href="article.html">Article Details</a></li>
-                <li class="mb-2"><a href="terms.html">Terms & Conditions</a></li>
-                <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
-            <p class="pb-2 p-small statement">Copyright © <a href="#your-link" class="no-underline">Your name</a></p>
-
-            <p class="pb-2 p-small statement">Distributed by :<a href="https://themewagon.com/" class="no-underline">Themewagon</a></p>
-        </div> 
-
-    <!-- end of container -->
-    </div> <!-- end of copyright -->
-    <!-- end of copyright -->
+        </footer>
+    
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Swiper JS -->
